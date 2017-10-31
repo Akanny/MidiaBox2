@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="midiabox.TelaLoginController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/logo.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="200.0" layoutY="200.0" prefHeight="25.0" prefWidth="182.0" promptText="Usuario" />
+      <PasswordField layoutX="200.0" layoutY="250.0" prefHeight="25.0" prefWidth="182.0" promptText="Senha" />
+      <ImageView fitHeight="32.0" fitWidth="38.0" layoutX="160.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagem/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="164.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagem/senha.png" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="291.0" layoutY="282.0" text="Esqueceu a senha?">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Hyperlink>
+      <Button layoutX="200.0" layoutY="320.0" mnemonicParsing="false" text="Entrar" />
+   </children>
+</AnchorPane>
