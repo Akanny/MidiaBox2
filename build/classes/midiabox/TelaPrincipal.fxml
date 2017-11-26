@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="705.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="midiabox.TelaPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="705.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="midiabox.TelaPrincipalController">
    <children>
       <ImageView fitHeight="142.0" fitWidth="303.0" layoutX="297.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -16,9 +16,9 @@
          </image>
       </ImageView>
       <TextField layoutX="145.0" layoutY="172.0" prefHeight="31.0" prefWidth="591.0" promptText="Pesquisar" />
-      <Button layoutX="741.0" layoutY="63.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="55.0">
+      <Button layoutX="741.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="47.0" prefWidth="55.0">
          <graphic>
-            <ImageView fx:id="upload" fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="upload" fitHeight="31.0" fitWidth="30.0" onDragDetected="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagens/upload.png" />
                </image>
@@ -33,15 +33,6 @@
             <ImageView fx:id="lupa" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagens/lupa.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="144.0" layoutY="349.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="24.0">
-         <graphic>
-            <ImageView fx:id="editar" fitHeight="18.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../imagens/editar.png" />
                </image>
             </ImageView>
          </graphic>
@@ -64,7 +55,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="257.0" layoutY="349.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0">
+      <Button layoutX="257.0" layoutY="349.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" onAction="#reproduzirVideo1">
          <graphic>
             <ImageView fx:id="play" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -85,7 +76,7 @@
             <Image url="@../imagens/video.png" />
          </image>
       </ImageView>
-      <Button layoutX="257.0" layoutY="504.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0">
+      <Button layoutX="257.0" layoutY="504.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" onAction="#reproduzirVideo2">
          <graphic>
             <ImageView fx:id="play1" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -112,24 +103,6 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="144.0" layoutY="504.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="24.0">
-         <graphic>
-            <ImageView fx:id="editar1" fitHeight="18.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../imagens/editar.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="145.0" layoutY="660.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="24.0">
-         <graphic>
-            <ImageView fx:id="editar11" fitHeight="18.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../imagens/editar.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
       <Button layoutX="220.0" layoutY="659.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="downloard11" fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
@@ -148,7 +121,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="258.0" layoutY="660.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0">
+      <Button layoutX="258.0" layoutY="660.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" onAction="#reproduzirVideo3">
          <graphic>
             <ImageView fx:id="play11" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>

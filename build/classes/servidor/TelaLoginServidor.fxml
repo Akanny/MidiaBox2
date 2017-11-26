@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="servidor.TelaLoginServidorController">
+   <children>
+      <TextField fx:id="txt_nomeserver" layoutX="210.0" layoutY="191.0" prefHeight="25.0" prefWidth="186.0" promptText="Usuario" />
+      <TextField fx:id="txt_senhaserver" layoutX="210.0" layoutY="237.0" prefHeight="25.0" prefWidth="186.0" promptText="Senha" />
+      <ImageView fitHeight="69.0" fitWidth="99.0" layoutX="90.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="175.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="178.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/senha.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="210.0" layoutY="310.0" mnemonicParsing="false" onAction="#EntrarLoginServer" text="Entrar" />
+      <Hyperlink layoutX="303.0" layoutY="267.0" text="Esqueceu a Senha?">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="143.0" fitWidth="366.0" layoutX="117.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/logoserver.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
