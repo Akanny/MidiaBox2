@@ -58,20 +58,20 @@ public class MidiaBox extends Application {
         TelaPrincipalController controller = (TelaPrincipalController) loader.getController();
         controller.setMain(this);
         Scene scene = new Scene(root);
-        Stage stage2 = new Stage();
-        stage2.setTitle("MidiaBox");
-
+        stage.close();
+        stage.setTitle("MidiaBox");
+        
         scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent doubleClicked) {
                 if (doubleClicked.getClickCount() == 2) { //se 2 clicks = tela cheia
-                    stage2.setFullScreen(true);
+                    stage.setFullScreen(true);
                 }
             }
         });
 
-        stage2.setScene(scene);
-        stage2.show();
+        stage.setScene(scene);
+        stage.show();
     }
 
     public static void main(String[] args) {
@@ -85,20 +85,22 @@ public class MidiaBox extends Application {
         controller.setMain(this);
         controller.setCodigoVideo(codigoVideo);
         Scene scene = new Scene(root);
+        Stage stage2 = new Stage();
+        
         //stage.close();
-        stage.setTitle("MidiaBox");
+        stage2.setTitle("MidiaBox");
 
         scene.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent doubleClicked) {
                 if (doubleClicked.getClickCount() == 2) { //se 2 clicks = tela cheia
-                    stage.setFullScreen(true);
+                    stage2.setFullScreen(true);
                 }
             }
         });
 
-        stage.setScene(scene);
-        stage.show();
+        stage2.setScene(scene);
+        stage2.show();
     }
 
 }

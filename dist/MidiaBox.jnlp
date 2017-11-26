@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="MidiaBox.jar" size="275988" download="eager" />
+    <jar href="MidiaBox.jar" size="275035" download="eager" />
     <jar href="lib\mysql-connector-java8-5.1.23.jar" size="791323" download="eager" />
     <jar href="lib\sqlite-jdbc-3.8.11.2.jar" size="5575351" download="eager" />
   </resources>
