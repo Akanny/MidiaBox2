@@ -21,6 +21,7 @@ import javafx.stage.WindowEvent;
 public class MidiaBox extends Application {
 
     Stage stage;
+    public String codigoVideo;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -48,7 +49,7 @@ public class MidiaBox extends Application {
     }
 
     public void abrirMenuPrincipal() throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaPrincipal.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaPrincipal2.fxml"));
         Parent root = (Parent) loader.load();
         TelaPrincipalController controller = (TelaPrincipalController) loader.getController();
         controller.setMain(this);
@@ -74,11 +75,12 @@ public class MidiaBox extends Application {
     }
 
     public void abrirReprodutor(String codigoVideo) throws Exception {
+        this.codigoVideo = codigoVideo;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaReproducao.fxml"));
         Parent root = (Parent) loader.load();
         TelaReproducaoController controller = (TelaReproducaoController) loader.getController();
         controller.setMain(this);
-        controller.setCodigoVideo(codigoVideo);
+        controller.reproduzir(codigoVideo);
         Scene scene = new Scene(root);
         Stage stage2 = new Stage();
         

@@ -1,5 +1,6 @@
 package midiabox;
 
+import Model.Midia;
 import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,6 +18,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
@@ -35,7 +37,12 @@ public class TelaPrincipalController implements Initializable {
     @FXML
     private Label statusLabel;
     @FXML
-    private TableView<Map<String, Object>> resultsTableView;
+    private TableView<Midia> midiaTable;
+    @FXML
+    private TableColumn<Midia, String> codigoColumn;
+    @FXML
+    private TableColumn<Midia, String> nameColumn;
+
 
     private ResourceBundle resources = null;
 
@@ -66,9 +73,8 @@ public class TelaPrincipalController implements Initializable {
 
     @FXML
     private void play() {
-        Map<String, Object> selectedResult = 
-                      resultsTableView.getSelectionModel().getSelectedItem();
-        Midia midia = (Midia) selectedResult.get("Midia");
+        Midia midia = 
+                      midiaTable.getSelectionModel().getSelectedItem();
         try {
             main.abrirReprodutor(String.valueOf(midia.getId_codigo()));
         } catch (Exception ex) {
@@ -79,23 +85,19 @@ public class TelaPrincipalController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resources) {
         this.resources = resources;
-
+        codigoColumn.setCellValueFactory(cellData -> cellData.getValue().getId_codigoProp());
+        nameColumn.setCellValueFactory(cellData -> cellData.getValue().getNomePro());
         handleSearchAction(null);
     }
 
     @FXML
     protected void handleSearchAction(ActionEvent event) {
 
-        List<Object> results = (List<Object>) new Client().getListaArquivos();
-
+        List<Midia> results = (List<Midia>) new Client().getListaArquivos();
+        ObservableList<Midia> resuults = FXCollections.observableArrayList();
+        resuults.addAll(results);
         // Update the table data
-        ObservableList<?> items
-                = FXCollections.observableList(results);
-        resultsTableView.setItems(
-                (ObservableList<Map<String, Object>>) items);
-        statusLabel.setText(String.format(resources
-                .getString("resultCountFormat"), results.size()));
-
+        midiaTable.setItems(resuults);
     }
 
 }

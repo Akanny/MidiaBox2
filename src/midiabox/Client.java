@@ -1,5 +1,6 @@
 package midiabox;
 
+import Model.Midia;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -97,12 +98,12 @@ public class Client {
         }
     }
     
-    public List getListaArquivos(){
-        List listaMidia = new ArrayList<>();
+    public List<Midia> getListaArquivos(){
+        List<Midia> listaMidia = new ArrayList<Midia>();
         try {
             saida.writeObject("getLista");
             saida.flush();
-            listaMidia = (List) entrada.readObject();
+            listaMidia = (List<Midia>) entrada.readObject();
             close();
         } catch (IOException ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);

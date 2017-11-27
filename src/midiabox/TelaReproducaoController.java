@@ -52,9 +52,14 @@ public class TelaReproducaoController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
 
+    }
+    
+    public void reproduzir(String codigoVideo){
+        
         //String VUrl = "file:/C:/Users/Jess/Desktop/videos/teste.mp4"; // caminho da midia
-        String VUrl = "file:/"+new Client().getUrlVideo("7"); // caminho da midia
+        String VUrl = "file:/"+new Client().getUrlVideo(codigoVideo); // caminho da midia
         Media media = new Media(VUrl);
         mediaplayer = new MediaPlayer(media);
 
@@ -94,9 +99,8 @@ public class TelaReproducaoController implements Initializable {
                 mediaplayer.seek(Duration.seconds(progressoSlider.getValue()));
             }
         });
-
     }
-
+    
     /**
      * Botao Play e Pause
      */
