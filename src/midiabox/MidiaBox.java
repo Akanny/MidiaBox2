@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 /**
  *
@@ -20,15 +21,9 @@ import javafx.stage.Stage;
 public class MidiaBox extends Application {
 
     Stage stage;
-    Client client;
-
-    public Client getClient() {
-        return client;
-    }
 
     @Override
     public void start(Stage stage) throws Exception {
-        client = new Client();
         this.stage = stage;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaLogin.fxml"));
 
@@ -96,6 +91,19 @@ public class MidiaBox extends Application {
                 if (doubleClicked.getClickCount() == 2) { //se 2 clicks = tela cheia
                     stage2.setFullScreen(true);
                 }
+            }
+        });
+        
+        stage2.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent t) {
+                t.consume();
+
+               controller.onClick_btn_stop();
+                
+                
+                stage2.close();
+               
             }
         });
 

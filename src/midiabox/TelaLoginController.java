@@ -9,7 +9,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
-import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -34,9 +33,11 @@ public class TelaLoginController implements Initializable {
 
         String nome; // variavel que vai guardar oq o usuario digitar na tela login
         nome = txtNome.getText();// guardando texto digitado
+        final Client client = new Client();
 
-        if (main.getClient().logar(txtNome.getText(), txtSenha.getText())) {
+        if ( client.logar(txtNome.getText(), txtSenha.getText())) {
             main.abrirMenuPrincipal();
+            client.close();
         } else {
             /**
              * Um alerta caso o usuario ou a senha forem digitado errado*

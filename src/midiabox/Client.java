@@ -1,5 +1,8 @@
 package midiabox;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -23,6 +26,8 @@ public class Client {
     public Client() {
         try {
             cliente = new Socket("localhost", 12345);
+            saida = new ObjectOutputStream(cliente.getOutputStream());
+            entrada = new ObjectInputStream(cliente.getInputStream());
         } catch (IOException ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -31,8 +36,6 @@ public class Client {
     public boolean logar(String usuario, String senha) throws ClassNotFoundException {
         boolean autenticou = false;
         try {
-            saida = new ObjectOutputStream(cliente.getOutputStream());
-            entrada = new ObjectInputStream(cliente.getInputStream());
             saida.writeObject("logar");
             saida.flush();
             saida.writeObject(usuario);
@@ -72,6 +75,24 @@ public class Client {
         FileOutputStream fos = new FileOutputStream(path);
         fos.write(pkg.getData());
         ds.close();
+    }
+
+    public void gravarArquivo(File arquivo) {
+        try {
+            FileInputStream fileInputStream;
+            fileInputStream = new FileInputStream(arquivo);
+            byte[] bArq = new byte[(int) arquivo.length()];
+            fileInputStream.read(bArq);
+            fileInputStream.close();
+            saida.writeObject("salvarMidia");
+            saida.writeInt(bArq.length);
+            saida.writeObject(arquivo.getName());
+            saida.write(bArq);
+            saida.flush();
+            saida.close();
+        } catch (Exception ex) {
+            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void close() {

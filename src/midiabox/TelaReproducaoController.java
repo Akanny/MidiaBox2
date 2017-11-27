@@ -112,7 +112,7 @@ public class TelaReproducaoController implements Initializable {
     }
 
     @FXML
-    private void onClick_btn_stop() {
+    public void onClick_btn_stop() {
         mediaplayer.stop();
     }
 

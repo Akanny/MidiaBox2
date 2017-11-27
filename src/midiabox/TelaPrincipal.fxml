@@ -2,8 +2,6 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,7 +13,6 @@
             <Image url="@../imagens/logo.png" />
          </image>
       </ImageView>
-      <TextField layoutX="145.0" layoutY="172.0" prefHeight="31.0" prefWidth="591.0" promptText="Pesquisar" />
       <Button layoutX="741.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="47.0" prefWidth="55.0">
          <graphic>
             <ImageView fx:id="upload" fitHeight="31.0" fitWidth="30.0" onDragDetected="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
@@ -28,16 +25,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="742.0" layoutY="172.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="30.0">
-         <graphic>
-            <ImageView fx:id="lupa" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../imagens/lupa.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="219.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+      <Button layoutX="198.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="downloard" fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -46,7 +34,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="181.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+      <Button layoutX="160.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="excluir" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -55,7 +43,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="257.0" layoutY="349.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" onAction="#reproduzirVideo1">
+      <Button layoutX="236.0" layoutY="349.0" mnemonicParsing="false" onAction="#reproduzirVideo1" prefHeight="25.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="play" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -69,14 +57,12 @@
             <Image url="@../imagens/video.png" />
          </image>
       </ImageView>
-      <TextArea layoutX="311.0" layoutY="244.0" prefHeight="92.0" prefWidth="322.0" promptText="Descrição" />
-      <TextArea layoutX="311.0" layoutY="399.0" prefHeight="92.0" prefWidth="322.0" promptText="Descrição" />
       <ImageView fx:id="video1" fitHeight="113.0" fitWidth="168.0" layoutX="142.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagens/video.png" />
          </image>
       </ImageView>
-      <Button layoutX="257.0" layoutY="504.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" onAction="#reproduzirVideo2">
+      <Button layoutX="238.0" layoutY="504.0" mnemonicParsing="false" onAction="#reproduzirVideo2" prefHeight="25.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="play1" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -85,7 +71,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="181.0" layoutY="503.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+      <Button layoutX="162.0" layoutY="503.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="excluir1" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -94,7 +80,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="219.0" layoutY="503.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+      <Button layoutX="200.0" layoutY="503.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="downloard1" fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -103,7 +89,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="220.0" layoutY="659.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+      <Button layoutX="201.0" layoutY="659.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="downloard11" fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -112,7 +98,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="182.0" layoutY="659.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+      <Button layoutX="163.0" layoutY="659.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="excluir11" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -121,7 +107,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="258.0" layoutY="660.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" onAction="#reproduzirVideo3">
+      <Button layoutX="239.0" layoutY="660.0" mnemonicParsing="false" onAction="#reproduzirVideo3" prefHeight="25.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="play11" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -135,6 +121,197 @@
             <Image url="@../imagens/video.png" />
          </image>
       </ImageView>
-      <TextArea layoutX="312.0" layoutY="555.0" prefHeight="92.0" prefWidth="322.0" promptText="Descrição" />
+      <Button layoutX="390.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="downloard2" fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/download.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="352.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="excluir2" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/excluir.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="428.0" layoutY="349.0" mnemonicParsing="false" onAction="#reproduzirVideo1" prefHeight="25.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="play2" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/play.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fx:id="video2" fitHeight="113.0" fitWidth="168.0" layoutX="334.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/video.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="575.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="downloard3" fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/download.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="537.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="excluir3" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/excluir.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="613.0" layoutY="349.0" mnemonicParsing="false" onAction="#reproduzirVideo1" prefHeight="25.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="play3" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/play.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fx:id="video3" fitHeight="113.0" fitWidth="168.0" layoutX="519.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/video.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="video12" fitHeight="113.0" fitWidth="168.0" layoutX="332.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/video.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="428.0" layoutY="504.0" mnemonicParsing="false" onAction="#reproduzirVideo2" prefHeight="25.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="play12" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/play.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="352.0" layoutY="503.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="excluir12" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/excluir.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="390.0" layoutY="503.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="downloard12" fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/download.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fx:id="video13" fitHeight="113.0" fitWidth="168.0" layoutX="519.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/video.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="615.0" layoutY="504.0" mnemonicParsing="false" onAction="#reproduzirVideo2" prefHeight="25.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="play13" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/play.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="539.0" layoutY="503.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="excluir13" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/excluir.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="577.0" layoutY="503.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="downloard13" fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/download.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="392.0" layoutY="659.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="downloard111" fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/download.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="354.0" layoutY="659.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="excluir111" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/excluir.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="430.0" layoutY="660.0" mnemonicParsing="false" onAction="#reproduzirVideo3" prefHeight="25.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="play111" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/play.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fx:id="video111" fitHeight="113.0" fitWidth="168.0" layoutX="334.0" layoutY="546.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/video.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="577.0" layoutY="659.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="downloard112" fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/download.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="539.0" layoutY="659.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="excluir112" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/excluir.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="615.0" layoutY="660.0" mnemonicParsing="false" onAction="#reproduzirVideo3" prefHeight="25.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fx:id="play112" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/play.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fx:id="video112" fitHeight="113.0" fitWidth="168.0" layoutX="519.0" layoutY="546.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/video.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
