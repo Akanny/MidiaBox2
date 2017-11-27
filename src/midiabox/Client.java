@@ -2,14 +2,13 @@ package midiabox;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -53,28 +52,21 @@ public class Client {
         String url = "";
         try {
             saida.writeObject("getVideo");
-            saida.flush();
             saida.writeObject(codigoVideo);
             saida.flush();
-            int tamanhoArquivo = (int) entrada.readObject();
+            int tamanhoArquivo = entrada.readInt();
             String nomeArquivo = (String) entrada.readObject();
-            entrada.close();
-            url = "c:\\temp\\" + nomeArquivo;
-            receberArquivo(tamanhoArquivo, url);
+            byte[] arquivo = new byte[tamanhoArquivo];
+            entrada.readFully(arquivo);
+            url = "c:\\Temp\\" + nomeArquivo;
+            FileOutputStream fos = new FileOutputStream(url);
+            fos.write(arquivo);
+            close();
+            url = url.replace("\\", "/").replace("\\", "/");
         } catch (Exception ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
         }
         return url;
-    }
-
-    public void receberArquivo(int tamanho, String path) throws Exception {
-        DatagramSocket ds = new DatagramSocket(12345);
-        byte[] msg = new byte[tamanho];
-        DatagramPacket pkg = new DatagramPacket(msg, msg.length);
-        ds.receive(pkg);
-        FileOutputStream fos = new FileOutputStream(path);
-        fos.write(pkg.getData());
-        ds.close();
     }
 
     public void gravarArquivo(File arquivo) {
@@ -104,5 +96,19 @@ public class Client {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    
+    public List getListaArquivos(){
+        List listaMidia = new ArrayList<>();
+        try {
+            saida.writeObject("getLista");
+            saida.flush();
+            listaMidia = (List) entrada.readObject();
+            close();
+        } catch (IOException ex) {
+            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return listaMidia;
+    }
 }

@@ -53,8 +53,8 @@ public class TelaReproducaoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        String VUrl = "file:/C:/Users/Jess/Desktop/videos/teste.mp4"; // caminho da midia
-        //String VUrl = "file:/"+main.getClient().getUrlVideo(codigoVideo); // caminho da midia
+        //String VUrl = "file:/C:/Users/Jess/Desktop/videos/teste.mp4"; // caminho da midia
+        String VUrl = "file:/"+new Client().getUrlVideo("7"); // caminho da midia
         Media media = new Media(VUrl);
         mediaplayer = new MediaPlayer(media);
 

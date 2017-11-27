@@ -43,7 +43,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="236.0" layoutY="349.0" mnemonicParsing="false" onAction="#reproduzirVideo1" prefHeight="25.0" prefWidth="24.0">
+      <Button layoutX="236.0" layoutY="349.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="play" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -62,7 +62,7 @@
             <Image url="@../imagens/video.png" />
          </image>
       </ImageView>
-      <Button layoutX="238.0" layoutY="504.0" mnemonicParsing="false" onAction="#reproduzirVideo2" prefHeight="25.0" prefWidth="24.0">
+      <Button layoutX="238.0" layoutY="504.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="play1" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -107,7 +107,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="239.0" layoutY="660.0" mnemonicParsing="false" onAction="#reproduzirVideo3" prefHeight="25.0" prefWidth="24.0">
+      <Button layoutX="239.0" layoutY="660.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="play11" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -139,7 +139,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="428.0" layoutY="349.0" mnemonicParsing="false" onAction="#reproduzirVideo1" prefHeight="25.0" prefWidth="24.0">
+      <Button layoutX="428.0" layoutY="349.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="play2" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -171,7 +171,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="613.0" layoutY="349.0" mnemonicParsing="false" onAction="#reproduzirVideo1" prefHeight="25.0" prefWidth="24.0">
+      <Button layoutX="613.0" layoutY="349.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="play3" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -190,7 +190,7 @@
             <Image url="@../imagens/video.png" />
          </image>
       </ImageView>
-      <Button layoutX="428.0" layoutY="504.0" mnemonicParsing="false" onAction="#reproduzirVideo2" prefHeight="25.0" prefWidth="24.0">
+      <Button layoutX="428.0" layoutY="504.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="play12" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -222,7 +222,7 @@
             <Image url="@../imagens/video.png" />
          </image>
       </ImageView>
-      <Button layoutX="615.0" layoutY="504.0" mnemonicParsing="false" onAction="#reproduzirVideo2" prefHeight="25.0" prefWidth="24.0">
+      <Button layoutX="615.0" layoutY="504.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="play13" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -267,7 +267,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="430.0" layoutY="660.0" mnemonicParsing="false" onAction="#reproduzirVideo3" prefHeight="25.0" prefWidth="24.0">
+      <Button layoutX="430.0" layoutY="660.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="play111" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -299,7 +299,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="615.0" layoutY="660.0" mnemonicParsing="false" onAction="#reproduzirVideo3" prefHeight="25.0" prefWidth="24.0">
+      <Button layoutX="615.0" layoutY="660.0" mnemonicParsing="false" onAction="#play" prefHeight="25.0" prefWidth="24.0">
          <graphic>
             <ImageView fx:id="play112" fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
